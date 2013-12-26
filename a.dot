@@ -1,0 +1,39 @@
+/*
+   digraph example3 {
+   Server1 -> Server2
+   Server2 -> Server3
+   Server3 -> Server1
+
+   Server1 [shape=box, label="Server1\nWeb Server", fillcolor="#ABACBA", style=filled]
+   Server2 [shape=triangle, label="Server2\nApp Server", fillcolor="#DDBCBC", style=filled]
+   Server3 [shape=circle, label="Server3\nDatabase Server", fillcolor="#FFAA22",style=filled]
+   }
+
+   graph hmc_graph{
+   "hmc01" -- "test520"
+   "test520" -- "lpar2"
+   "test520" -- "lpar3"
+   "hmc01" -- "test570"
+   "test570" -- "aixtest01"
+   "test570" -- "aixtest02"
+   "test570" -- "aixtest03"
+   "hmc01" -- "test510"
+   "test510" -- "lpar1"
+   }
+*/   
+   digraph G {
+   size="4,4";
+   main [shape=box]; /*×¢ÊÍ*/
+main -> parse [weight=8];
+parse -> execute;
+main -> init [style=dotted];
+main -> cleanup;
+execute -> {make_string; printf}
+init -> make_string;
+edge [color=red];
+main -> printf [style=bold,label="100 times"];
+make_string [label="make a\nstring"];
+node [shape=box, style=filled, color=".7 .3 1.0"];
+execute -> compare;
+}
+

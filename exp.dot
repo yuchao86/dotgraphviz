@@ -1,0 +1,9 @@
+digraph depends //必须的
+{
+
+edge [fontname="SimSun",fontsize=9]; //定义连接线特性，此处为字体、字号
+node [fontname="SimSun",fontsize=9,shape=box,fixedsize=false,width=0.3]; //定义节点特性，此处为 字体、字号、节点形状、边框宽度
+pr_中文示例;
+
+pr_中文示例->pr_系统日志[color=blue];
+}
